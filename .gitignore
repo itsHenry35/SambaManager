@@ -1,12 +1,7 @@
 # Backend
-samba-manager
-samba-manager.exe
+SambaManager
+SambaManager.exe
 config.yaml
-
-# Frontend
-frontend/node_modules/
-frontend/dist/
-frontend/.vite/
 
 # Logs
 *.log
