@@ -1,0 +1,278 @@
+{
+  "app": {
+    "title": "Samba 管理器",
+    "logout": "退出登录"
+  },
+  "common": {
+    "actions": "操作",
+    "cancel": "取消",
+    "create": "创建",
+    "save": "保存",
+    "delete": "删除",
+    "logout": "退出登录",
+    "search": "搜索",
+    "rowsPerPage": "每页行数",
+    "close": "关闭"
+  },
+  "userDashboard": {
+    "title": "我的共享",
+    "myShares": "我的共享文件夹",
+    "createShare": "创建共享",
+    "editShare": "编辑共享",
+    "deleteShare": "删除共享",
+    "deleteConfirm": "您确定要删除共享",
+    "changePassword": "修改密码",
+    "oldPassword": "旧密码",
+    "newPassword": "新密码",
+    "shareId": "共享 ID",
+    "path": "路径",
+    "subPath": "子目录",
+    "subPathPlaceholder": "例如：documents/projects",
+    "subPathHelper": "主目录下的子目录相对路径（留空则共享整个主目录）",
+    "owner": "所有者",
+    "sharedWith": "共享给",
+    "sharedWithPlaceholder": "输入以搜索用户...",
+    "sharedWithHelper": "选择要共享的用户",
+    "permissions": "权限",
+    "comment": "备注",
+    "readOnly": "只读",
+    "readWrite": "读写",
+    "noShares": "还没有共享。创建您的第一个共享！"
+  },
+  "login": {
+    "title": "Samba 管理器",
+    "subtitle": "登录以管理您的 Samba 服务器",
+    "username": "用户名",
+    "password": "密码",
+    "loginButton": "登录",
+    "loggingIn": "登录中...",
+    "loginFailed": "登录失败。请检查您的凭据。"
+  },
+  "tabs": {
+    "userManagement": "用户管理",
+    "shareManagement": "共享管理",
+    "settings": "设置"
+  },
+  "users": {
+    "title": "用户",
+    "subtitle": "管理 Samba 用户",
+    "createUser": "创建用户",
+    "deleteUser": "删除用户",
+    "deleteUserConfirm": "删除用户？",
+    "deleteHomeDir": "同时删除主目录",
+    "changePassword": "更改密码",
+    "noUsers": "未找到用户",
+    "noSearchResults": "未找到用户",
+    "searchPlaceholder": "按用户名搜索...",
+    "homeDir": "主目录",
+    "deleteConfirm": "您确定要删除用户 {{username}} 吗？这也将删除他们的主目录。",
+    "createSuccess": "用户创建成功",
+    "deleteSuccess": "用户删除成功",
+    "changePasswordSuccess": "密码更改成功",
+    "orphanedDirs": "孤立目录",
+    "orphanedDirsInfo": "这些目录属于已删除的用户，可以安全删除。",
+    "noOrphanedDirs": "没有孤立目录",
+    "deleteOrphanedConfirm": "删除孤立目录？",
+    "dirName": "目录名",
+    "dirPath": "路径",
+    "dirSize": "大小",
+    "form": {
+      "username": "用户名",
+      "password": "密码",
+      "newPassword": "新密码",
+      "creating": "创建中...",
+      "create": "创建",
+      "cancel": "取消",
+      "change": "更改",
+      "changing": "更改中..."
+    }
+  },
+  "shares": {
+    "title": "共享",
+    "subtitle": "将用户目录共享给其他用户",
+    "createShare": "创建共享",
+    "editShare": "编辑共享",
+    "noShares": "未找到共享",
+    "deleteConfirm": "您确定要删除共享 {{name}} 吗？",
+    "readOnly": "只读",
+    "readWrite": "读写",
+    "subdirectory": "子目录",
+    "createSuccess": "共享创建成功",
+    "updateSuccess": "共享更新成功",
+    "deleteSuccess": "共享删除成功",
+    "form": {
+      "name": "共享名称",
+      "namePlaceholder": "可选的自定义名称（例如：\"ProjectFiles\"或\"项目文件\"）",
+      "nameHelper": "留空则使用时间戳。仅允许字母数字和中文字符。共享名称创建后无法修改。",
+      "nameHelperEdit": "共享名称创建后无法修改",
+      "owner": "所有者",
+      "ownerPlaceholder": "输入以搜索用户...",
+      "ownerHelper": "选择此共享的所有者",
+      "sharedWith": "共享给（选择用户）",
+      "sharedWithPlaceholder": "输入以搜索用户...",
+      "sharedWithHelper": "选择要共享的用户",
+      "subPath": "子目录路径（可选）",
+      "subPathPlaceholder": "例如：documents/projects",
+      "subPathHelper": "所有者主目录下的子目录相对路径（留空则共享整个主目录）",
+      "comment": "备注（可选）",
+      "readOnly": "只读（所有者始终可写）",
+      "creating": "创建中...",
+      "create": "创建",
+      "update": "更新",
+      "cancel": "取消"
+    }
+  },
+  "errors": {
+    "failedToLoad": "加载失败",
+    "failedToLoadUsers": "加载用户失败",
+    "failedToLoadShares": "加载共享失败",
+    "failedToCreate": "创建失败",
+    "failedToUpdate": "更新失败",
+    "failedToDelete": "删除失败"
+  },
+  "settings": {
+    "title": "系统设置",
+    "environmentCheck": "环境检查",
+    "refresh": "刷新",
+    "fix": "修复方法",
+    "sambaConfig": "Samba 配置",
+    "sambaConfigDesc": "编辑 Samba 全局和 homes 部分设置",
+    "saveConfig": "保存配置",
+    "rawEditor": "原始配置编辑器",
+    "rawEditorTitle": "编辑原始 smb.conf",
+    "rawEditorDesc": "直接编辑 Samba 配置文件。请小心 - 无效的语法会破坏 Samba！",
+    "saveRawConfig": "保存原始配置",
+    "viewStatus": "查看状态",
+    "sambaStatus": "Samba 状态",
+    "sambaStatusDesc": "显示 smbstatus 命令的输出，包含当前连接和文件锁信息",
+    "loadingConfig": "加载配置中...",
+    "configSavedSuccess": "配置保存成功",
+    "rawConfigSavedSuccess": "原始配置保存成功",
+    "failedToLoadConfig": "加载配置失败",
+    "failedToSaveConfig": "保存配置失败",
+    "failedToLoadRawConfig": "加载原始配置失败",
+    "failedToSaveRawConfig": "保存原始配置失败",
+    "checks": {
+      "samba-installed": {
+        "name": "Samba 已安装",
+        "description": "必须安装 Samba 服务器才能进行文件共享",
+        "pass": "Samba 已安装",
+        "fail": "Samba 未安装",
+        "fix": "安装：sudo apt-get install samba samba-common-bin (Ubuntu/Debian) 或 sudo yum install samba samba-common (CentOS/RHEL)"
+      },
+      "smbpasswd-command": {
+        "name": "smbpasswd 命令",
+        "description": "管理 Samba 用户需要 smbpasswd",
+        "pass": "smbpasswd 可用",
+        "fail": "未找到 smbpasswd 命令",
+        "fix": "安装 samba-common-bin 软件包"
+      },
+      "testparm-command": {
+        "name": "testparm 命令",
+        "description": "testparm 用于验证 Samba 配置",
+        "pass": "testparm 可用",
+        "warning": "未找到 testparm 命令",
+        "fix": "安装 samba-common-bin 软件包"
+      },
+      "smbclient-command": {
+        "name": "smbclient 命令",
+        "description": "smbclient 用于测试 Samba 连接和访问共享",
+        "pass": "smbclient 可用",
+        "warning": "未找到 smbclient 命令",
+        "fix": "安装 smbclient 软件包：sudo apt-get install smbclient (Ubuntu/Debian) 或 sudo yum install samba-client (CentOS/RHEL)"
+      },
+      "smb-conf-file": {
+        "name": "smb.conf 文件",
+        "description": "Samba 配置文件必须存在",
+        "pass": "smb.conf 存在且可读",
+        "warning": "smb.conf 存在但可能不可读",
+        "fail": "未找到 smb.conf 或无法访问",
+        "fix": "创建 smb.conf 或检查文件权限"
+      },
+      "libnss-extrausers": {
+        "name": "libnss-extrausers",
+        "description": "管理非系统用户所需",
+        "pass": "libnss-extrausers 已安装",
+        "fail": "未找到 libnss-extrausers",
+        "fix": "安装：sudo apt-get install libnss-extrausers"
+      },
+      "extrausers-directory": {
+        "name": "Extrausers 目录",
+        "description": "用于存储非系统用户数据的目录",
+        "pass": "Extrausers 目录结构正确",
+        "fail": "/var/lib/extrausers 目录或所需文件缺失",
+        "fix": "创建：sudo mkdir -p /var/lib/extrausers && sudo touch /var/lib/extrausers/{passwd,group,shadow} && sudo chmod 600 /var/lib/extrausers/shadow"
+      },
+      "nsswitch-conf": {
+        "name": "nsswitch.conf",
+        "description": "用户数据库查找的 NSS 配置",
+        "pass": "nsswitch.conf 已配置 extrausers",
+        "fail": "nsswitch.conf 未配置 extrausers",
+        "fix": "编辑 /etc/nsswitch.conf 并在 passwd 和 group 行添加 'extrausers'"
+      },
+      "samba-service": {
+        "name": "Samba 服务",
+        "description": "Samba 服务必须运行才能进行文件共享",
+        "pass": "Samba 服务 (smbd) 正在运行",
+        "warning": "Samba 服务 (smbd) 未运行",
+        "fix": "启动：sudo systemctl start smbd (或 sudo service smbd start)"
+      },
+      "home-directory": {
+        "name": "主目录",
+        "description": "Samba 用户主目录的基础目录",
+        "pass": "主目录存在",
+        "fail": "未找到主目录或无法访问",
+        "fix": "创建：sudo mkdir -p /home/samba && sudo chown root:root /home/samba && sudo chmod 755 /home/samba"
+      },
+      "samba-config-valid": {
+        "name": "Samba 配置有效",
+        "description": "Samba 配置必须语法正确",
+        "pass": "Samba 配置有效",
+        "fail": "Samba 配置有错误",
+        "fix": "运行 'sudo testparm' 查看错误"
+      },
+      "passdb-backend": {
+        "name": "密码数据库后端",
+        "description": "此应用程序必须设置为 'tdbsam'",
+        "pass": "密码数据库后端已正确设置为 'tdbsam'",
+        "fail": "密码数据库后端未设置为 'tdbsam'（此应用程序要求）",
+        "fix": "编辑 /etc/samba/smb.conf [global] 部分并设置：passdb backend = tdbsam"
+      },
+      "security-mode": {
+        "name": "安全模式",
+        "description": "此应用程序必须设置为 'user'",
+        "pass": "安全模式已正确设置为 'user'",
+        "fail": "安全模式未设置为 'user'（此应用程序要求）",
+        "fix": "编辑 /etc/samba/smb.conf [global] 部分并设置：security = user"
+      },
+      "force-user": {
+        "name": "强制用户",
+        "description": "[homes] 部分必须设置 force user = root",
+        "pass": "强制用户已正确设置为 'root'",
+        "fail": "[homes] 部分中强制用户未设置为 'root'（此应用程序要求）",
+        "fix": "编辑 /etc/samba/smb.conf [homes] 部分并设置：force user = root"
+      },
+      "force-group": {
+        "name": "强制组",
+        "description": "[homes] 部分必须设置 force group = root",
+        "pass": "强制组已正确设置为 'root'",
+        "fail": "[homes] 部分中强制组未设置为 'root'（此应用程序要求）",
+        "fix": "编辑 /etc/samba/smb.conf [homes] 部分并设置：force group = root"
+      },
+      "running-as-root": {
+        "name": "以 Root 运行",
+        "description": "应用程序必须以 root 权限运行才能管理用户和 Samba",
+        "pass": "应用程序正以 root 运行（UID 0）",
+        "fail": "应用程序未以 root 运行（此应用程序要求）",
+        "fix": "使用 sudo 或以 root 用户运行应用程序：sudo ./sambamanager"
+      },
+      "access-based-share-enum": {
+        "name": "访问权限枚举",
+        "description": "[global] 部分必须设置 access based share enum = yes",
+        "pass": "访问权限枚举已正确设置为 'yes'",
+        "fail": "[global] 部分中访问权限枚举未设置为 'yes'（必填项）",
+        "fix": "编辑 /etc/samba/smb.conf [global] 部分并设置：access based share enum = yes"
+      }
+    }
+  }
+}

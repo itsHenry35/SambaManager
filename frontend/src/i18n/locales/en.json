@@ -1,0 +1,278 @@
+{
+  "app": {
+    "title": "Samba Manager",
+    "logout": "Logout"
+  },
+  "common": {
+    "actions": "Actions",
+    "cancel": "Cancel",
+    "create": "Create",
+    "save": "Save",
+    "delete": "Delete",
+    "logout": "Logout",
+    "search": "Search",
+    "rowsPerPage": "Rows per page",
+    "close": "Close"
+  },
+  "userDashboard": {
+    "title": "My Shares",
+    "myShares": "My Shared Folders",
+    "createShare": "Create Share",
+    "editShare": "Edit Share",
+    "deleteShare": "Delete Share",
+    "deleteConfirm": "Are you sure you want to delete share",
+    "changePassword": "Change Password",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+    "shareId": "Share ID",
+    "path": "Path",
+    "subPath": "Subdirectory",
+    "subPathPlaceholder": "e.g., documents/projects",
+    "subPathHelper": "Relative path to subdirectory within your home (leave empty for entire home)",
+    "owner": "Owner",
+    "sharedWith": "Shared With",
+    "sharedWithPlaceholder": "Type to search users...",
+    "sharedWithHelper": "Select users to share with",
+    "permissions": "Permissions",
+    "comment": "Comment",
+    "readOnly": "Read Only",
+    "readWrite": "Read/Write",
+    "noShares": "No shares yet. Create your first share!"
+  },
+  "login": {
+    "title": "Samba Manager",
+    "subtitle": "Login to manage your Samba server",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Login",
+    "loggingIn": "Logging in...",
+    "loginFailed": "Login failed. Please check your credentials."
+  },
+  "tabs": {
+    "userManagement": "User Management",
+    "shareManagement": "Share Management",
+    "settings": "Settings"
+  },
+  "users": {
+    "title": "Users",
+    "subtitle": "Manage Samba users",
+    "createUser": "Create User",
+    "deleteUser": "Delete User",
+    "deleteUserConfirm": "Delete user?",
+    "deleteHomeDir": "Also delete home directory",
+    "changePassword": "Change Password",
+    "noUsers": "No users found",
+    "noSearchResults": "No users found",
+    "searchPlaceholder": "Search by username...",
+    "homeDir": "Home Directory",
+    "deleteConfirm": "Are you sure you want to delete user {{username}}? This will also delete their home directory.",
+    "createSuccess": "User created successfully",
+    "deleteSuccess": "User deleted successfully",
+    "changePasswordSuccess": "Password changed successfully",
+    "orphanedDirs": "Orphaned Directories",
+    "orphanedDirsInfo": "These directories belong to deleted users and can be safely removed.",
+    "noOrphanedDirs": "No orphaned directories",
+    "deleteOrphanedConfirm": "Delete orphaned directory?",
+    "dirName": "Directory Name",
+    "dirPath": "Path",
+    "dirSize": "Size",
+    "form": {
+      "username": "Username",
+      "password": "Password",
+      "newPassword": "New Password",
+      "creating": "Creating...",
+      "create": "Create",
+      "cancel": "Cancel",
+      "change": "Change",
+      "changing": "Changing..."
+    }
+  },
+  "shares": {
+    "title": "Shares",
+    "subtitle": "Share user directories with other users",
+    "createShare": "Create Share",
+    "editShare": "Edit Share",
+    "noShares": "No shares found",
+    "deleteConfirm": "Are you sure you want to delete share {{name}}?",
+    "readOnly": "Read Only",
+    "readWrite": "Read/Write",
+    "subdirectory": "Subdirectory",
+    "createSuccess": "Share created successfully",
+    "updateSuccess": "Share updated successfully",
+    "deleteSuccess": "Share deleted successfully",
+    "form": {
+      "name": "Share Name",
+      "namePlaceholder": "Optional custom name (e.g., \"ProjectFiles\" or \"项目文件\")",
+      "nameHelper": "Leave empty to use timestamp. Only alphanumeric and Chinese characters allowed. Share name cannot be modified after creation.",
+      "nameHelperEdit": "Share name cannot be modified after creation",
+      "owner": "Owner",
+      "ownerPlaceholder": "Type to search users...",
+      "ownerHelper": "Select the owner of this share",
+      "sharedWith": "Share with (select users)",
+      "sharedWithPlaceholder": "Type to search users...",
+      "sharedWithHelper": "Select users to share with",
+      "subPath": "Subdirectory Path (Optional)",
+      "subPathPlaceholder": "e.g., documents/projects",
+      "subPathHelper": "Relative path to subdirectory within owner's home (leave empty for entire home)",
+      "comment": "Comment (optional)",
+      "readOnly": "Read Only (owner can always write)",
+      "creating": "Creating...",
+      "create": "Create",
+      "update": "Update",
+      "cancel": "Cancel"
+    }
+  },
+  "errors": {
+    "failedToLoad": "Failed to load",
+    "failedToLoadUsers": "Failed to load users",
+    "failedToLoadShares": "Failed to load shares",
+    "failedToCreate": "Failed to create",
+    "failedToUpdate": "Failed to update",
+    "failedToDelete": "Failed to delete"
+  },
+  "settings": {
+    "title": "System Settings",
+    "environmentCheck": "Environment Check",
+    "refresh": "Refresh",
+    "fix": "Fix",
+    "sambaConfig": "Samba Configuration",
+    "sambaConfigDesc": "Edit Samba global and homes section settings",
+    "saveConfig": "Save Configuration",
+    "rawEditor": "Raw Config Editor",
+    "rawEditorTitle": "Edit Raw smb.conf",
+    "rawEditorDesc": "Direct edit of the Samba configuration file. Be careful - invalid syntax will break Samba!",
+    "saveRawConfig": "Save Raw Config",
+    "viewStatus": "View Status",
+    "sambaStatus": "Samba Status",
+    "sambaStatusDesc": "Output from smbstatus command showing current connections and locks",
+    "loadingConfig": "Loading configuration...",
+    "configSavedSuccess": "Configuration saved successfully",
+    "rawConfigSavedSuccess": "Raw configuration saved successfully",
+    "failedToLoadConfig": "Failed to load configuration",
+    "failedToSaveConfig": "Failed to save configuration",
+    "failedToLoadRawConfig": "Failed to load raw configuration",
+    "failedToSaveRawConfig": "Failed to save raw configuration",
+    "checks": {
+      "samba-installed": {
+        "name": "Samba Installed",
+        "description": "Samba server must be installed for file sharing",
+        "pass": "Samba is installed",
+        "fail": "Samba is not installed",
+        "fix": "Install: sudo apt-get install samba samba-common-bin (Ubuntu/Debian) or sudo yum install samba samba-common (CentOS/RHEL)"
+      },
+      "smbpasswd-command": {
+        "name": "smbpasswd Command",
+        "description": "smbpasswd is required for managing Samba users",
+        "pass": "smbpasswd is available",
+        "fail": "smbpasswd command not found",
+        "fix": "Install samba-common-bin package"
+      },
+      "testparm-command": {
+        "name": "testparm Command",
+        "description": "testparm is used to validate Samba configuration",
+        "pass": "testparm is available",
+        "warning": "testparm command not found",
+        "fix": "Install samba-common-bin package"
+      },
+      "smbclient-command": {
+        "name": "smbclient Command",
+        "description": "smbclient is used to test Samba connections and access shares",
+        "pass": "smbclient is available",
+        "warning": "smbclient command not found",
+        "fix": "Install smbclient package: sudo apt-get install smbclient (Ubuntu/Debian) or sudo yum install samba-client (CentOS/RHEL)"
+      },
+      "smb-conf-file": {
+        "name": "smb.conf File",
+        "description": "Samba configuration file must exist",
+        "pass": "smb.conf exists and is readable",
+        "warning": "smb.conf exists but may not be readable",
+        "fail": "smb.conf not found or cannot be accessed",
+        "fix": "Create smb.conf or check file permissions"
+      },
+      "libnss-extrausers": {
+        "name": "libnss-extrausers",
+        "description": "Required for managing non-system users",
+        "pass": "libnss-extrausers is installed",
+        "fail": "libnss-extrausers not found",
+        "fix": "Install: sudo apt-get install libnss-extrausers"
+      },
+      "extrausers-directory": {
+        "name": "Extrausers Directory",
+        "description": "Directory for storing non-system user data",
+        "pass": "Extrausers directory structure is correct",
+        "fail": "/var/lib/extrausers directory or required files missing",
+        "fix": "Create: sudo mkdir -p /var/lib/extrausers && sudo touch /var/lib/extrausers/{passwd,group,shadow} && sudo chmod 600 /var/lib/extrausers/shadow"
+      },
+      "nsswitch-conf": {
+        "name": "nsswitch.conf",
+        "description": "NSS configuration for user database lookup",
+        "pass": "nsswitch.conf is configured for extrausers",
+        "fail": "nsswitch.conf not configured for extrausers",
+        "fix": "Edit /etc/nsswitch.conf and add 'extrausers' to passwd and group lines"
+      },
+      "samba-service": {
+        "name": "Samba Service",
+        "description": "Samba service must be running for file sharing",
+        "pass": "Samba service (smbd) is running",
+        "warning": "Samba service (smbd) is not running",
+        "fix": "Start: sudo systemctl start smbd (or sudo service smbd start)"
+      },
+      "home-directory": {
+        "name": "Home Directory",
+        "description": "Base directory for Samba user home directories",
+        "pass": "Home directory exists",
+        "fail": "Home directory not found or inaccessible",
+        "fix": "Create: sudo mkdir -p /home/samba && sudo chown root:root /home/samba && sudo chmod 755 /home/samba"
+      },
+      "samba-config-valid": {
+        "name": "Samba Configuration Valid",
+        "description": "Samba configuration must be syntactically correct",
+        "pass": "Samba configuration is valid",
+        "fail": "Samba configuration has errors",
+        "fix": "Run 'sudo testparm' to see errors"
+      },
+      "passdb-backend": {
+        "name": "Passdb Backend",
+        "description": "Must be set to 'tdbsam' for this application",
+        "pass": "Passdb backend is correctly set to 'tdbsam'",
+        "fail": "Passdb backend is not set to 'tdbsam' (required for this application)",
+        "fix": "Edit /etc/samba/smb.conf [global] section and set: passdb backend = tdbsam"
+      },
+      "security-mode": {
+        "name": "Security Mode",
+        "description": "Must be set to 'user' for this application",
+        "pass": "Security mode is correctly set to 'user'",
+        "fail": "Security mode is not set to 'user' (required for this application)",
+        "fix": "Edit /etc/samba/smb.conf [global] section and set: security = user"
+      },
+      "force-user": {
+        "name": "Force User",
+        "description": "[homes] section must have force user = root",
+        "pass": "Force user is correctly set to 'root'",
+        "fail": "Force user is not set to 'root' in [homes] section (required for this application)",
+        "fix": "Edit /etc/samba/smb.conf [homes] section and set: force user = root"
+      },
+      "force-group": {
+        "name": "Force Group",
+        "description": "[homes] section must have force group = root",
+        "pass": "Force group is correctly set to 'root'",
+        "fail": "Force group is not set to 'root' in [homes] section (required for this application)",
+        "fix": "Edit /etc/samba/smb.conf [homes] section and set: force group = root"
+      },
+      "running-as-root": {
+        "name": "Running as Root",
+        "description": "Application must run with root privileges for user and Samba management",
+        "pass": "Application is running as root (UID 0)",
+        "fail": "Application is not running as root (required for this application)",
+        "fix": "Run the application with sudo or as root user: sudo ./sambamanager"
+      },
+      "access-based-share-enum": {
+        "name": "Access Based Share Enum",
+        "description": "[global] section must have access based share enum = yes",
+        "pass": "Access based share enum is correctly set to 'yes'",
+        "fail": "Access based share enum is not set to 'yes' in [global] section (required)",
+        "fix": "Edit /etc/samba/smb.conf [global] section and set: access based share enum = yes"
+      }
+    }
+  }
+}

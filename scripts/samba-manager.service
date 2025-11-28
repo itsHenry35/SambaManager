@@ -1,0 +1,14 @@
+[Unit]
+Description=Samba Manager Service
+After=network.target samba.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/samba-manager
+ExecStart=/opt/samba-manager/samba-manager -config /opt/samba-manager/config.yaml
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
