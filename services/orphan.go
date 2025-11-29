@@ -70,11 +70,6 @@ func (s *SambaService) DeleteOrphanedDirectory(dirName string) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	// Validate directory name
-	if !isValidUsername(dirName) {
-		return fmt.Errorf("invalid directory name")
-	}
-
 	// Ensure the directory is actually orphaned
 	users, err := s.ListUsers()
 	if err != nil {
