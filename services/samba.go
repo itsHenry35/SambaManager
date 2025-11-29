@@ -648,6 +648,16 @@ func (s *SambaService) UpdateShare(shareId string, share *types.Share) error {
 		return fmt.Errorf("invalid share ID format")
 	}
 
+	// Extract owner from share ID
+	matches := sharePattern.FindStringSubmatch(shareId)
+	if len(matches) < 2 {
+		return fmt.Errorf("failed to extract owner from share ID")
+	}
+	owner := matches[1]
+
+	// Set the owner in the share object (needed for path calculation)
+	share.Owner = owner
+
 	// Validate shared_with usernames
 	if len(share.SharedWith) == 0 {
 		return fmt.Errorf("must share with at least one user")
@@ -659,7 +669,7 @@ func (s *SambaService) UpdateShare(shareId string, share *types.Share) error {
 	}
 
 	// Get owner's home directory
-	ownerHome := filepath.Join(config.AppConfig.HomeDir, share.Owner)
+	ownerHome := filepath.Join(config.AppConfig.HomeDir, owner)
 	if _, err := os.Stat(ownerHome); os.IsNotExist(err) {
 		return fmt.Errorf("owner's home directory does not exist")
 	}
