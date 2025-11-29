@@ -11,9 +11,6 @@ import (
 
 // ListOrphanedDirectories lists home directories that don't have corresponding Samba users
 func (s *SambaService) ListOrphanedDirectories() ([]types.OrphanedDirectory, error) {
-	s.mu.RLock()
-	defer s.mu.RUnlock()
-
 	// Get all Samba users
 	users, err := s.ListUsers()
 	if err != nil {
@@ -43,8 +40,9 @@ func (s *SambaService) ListOrphanedDirectories() ([]types.OrphanedDirectory, err
 
 				// Get directory size
 				var size int64
-				filepath.Walk(dirPath, func(_ string, info os.FileInfo, err error) error {
+				err := filepath.Walk(dirPath, func(_ string, info os.FileInfo, err error) error {
 					if err != nil {
+						// Skip files/dirs that can't be accessed
 						return nil
 					}
 					if !info.IsDir() {
@@ -52,6 +50,10 @@ func (s *SambaService) ListOrphanedDirectories() ([]types.OrphanedDirectory, err
 					}
 					return nil
 				})
+				// If walk fails, set size to 0 and continue
+				if err != nil {
+					size = 0
+				}
 
 				orphanedDirs = append(orphanedDirs, types.OrphanedDirectory{
 					Name: dirName,
@@ -67,9 +69,6 @@ func (s *SambaService) ListOrphanedDirectories() ([]types.OrphanedDirectory, err
 
 // DeleteOrphanedDirectory deletes an orphaned home directory
 func (s *SambaService) DeleteOrphanedDirectory(dirName string) error {
-	s.mu.Lock()
-	defer s.mu.Unlock()
-
 	// Ensure the directory is actually orphaned
 	users, err := s.ListUsers()
 	if err != nil {

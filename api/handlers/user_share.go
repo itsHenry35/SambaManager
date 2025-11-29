@@ -31,16 +31,7 @@ func (h *UserShareHandler) ListMyShares(c *gin.Context) {
 		return
 	}
 
-	var shares []types.ShareResponse
-	err := h.queue.SubmitSync(func() error {
-		result, err := h.service.ListShares()
-		if err != nil {
-			return err
-		}
-		shares = result
-		return nil
-	})
-
+	shares, err := h.service.ListShares()
 	if err != nil {
 		utils.ResponseInternalServerError(c, err.Error())
 		return
